@@ -22,10 +22,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_pinecone import PineconeVectorStore
 from langchain_cohere import CohereRerank
 from langchain.retrievers.contextual_compression import ContextualCompressionRetriever
-from dotenv import load_dotenv
 
-load_dotenv('/mnt/d/rag_app_streamlit/.env')
-os.environ['PINECONE_API_KEY'] = os.getenv('PINECONE_API_KEY') #type: ignore
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", 
