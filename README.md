@@ -91,34 +91,34 @@ Then open the link (usually `http://localhost:8501/`) in your browser.
                                   │
                                   ▼
                     ┌─────────────────────────┐
-                    │  Document Processing     │
-                    │  (Chunking & Embedding)  │
+                    │  Document Processing    │
+                    │  (Chunking & Embedding) │
                     └─────────────┬───────────┘
                                   │
                                   ▼
                     ┌─────────────────────────┐
-                    │     Pinecone VectorDB    │
-                    │  (Stores embeddings for  │
-                    │   semantic retrieval)    │
+                    │     Pinecone VectorDB   │
+                    │  (Stores embeddings for │
+                    │   semantic retrieval)   │
                     └─────────────┬───────────┘
                                   │
                                   ▼
                     ┌─────────────────────────┐
-                    │    Query Processing      │
-                    │  (Retrieval + Re-ranking │
-                    │   + Context Formatting)  │
+                    │    Query Processing     │
+                    │ (Retrieval + Re-ranking │
+                    │   + Context Formatting) │
                     └─────────────┬───────────┘
                                   │
                                   ▼
                     ┌─────────────────────────┐
-                    │    LLM (Groq / OpenAI)   │
-                    │ Generates final response │
+                    │    LLM (Groq)           │
+                    │Generates final response │
                     └─────────────┬───────────┘
                                   │
                                   ▼
                     ┌─────────────────────────┐
-                    │   Streamlit Frontend     │
-                    │   (User-facing answers)  │
+                    │   Streamlit Frontend    │
+                    │   (User-facing answers) │
                     └─────────────────────────┘
 ```
 
