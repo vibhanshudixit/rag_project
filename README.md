@@ -6,7 +6,7 @@ It lets you upload PDF or text documents, indexes them into Pinecone, and provid
 
 
 To access the frontend on StreamLit Cloud: https://ragproject-vibhanshu.streamlit.app/
-To access the pinecone vector DB: 
+
 
 ---
 
