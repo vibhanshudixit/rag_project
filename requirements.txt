@@ -1,5 +1,6 @@
 streamlit
 torch
+pypdf
 PyPDF2
 langchain
 langchain-experimental
