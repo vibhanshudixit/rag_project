@@ -15,10 +15,6 @@ if uploaded_files:
 else: 
     st.info("Please Upload documents to start!")
 
-# Initialize session state
-if "rag" not in st.session_state:
-    st.session_state.rag = RAGPipeline(index_name="rag-index", top_k=5, documents=documents, vectorstore=vectorstore)
-
 st.set_page_config(page_title="Hybrid RAG App", layout="wide")
 
 st.title("Hybrid RAG with Pinecone + Cohere ReRank")
