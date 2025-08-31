@@ -1,0 +1,15 @@
+
+```txt
+streamlit
+torch
+PyPDF2
+langchain
+langchain-experimental
+langchain-community
+langchain-groq
+langchain-pinecone
+langchain-cohere
+pinecone-client
+cohere
+python-dotenv
+```
