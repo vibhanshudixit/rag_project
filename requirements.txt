@@ -1,5 +1,3 @@
-
-```txt
 streamlit
 torch
 PyPDF2
@@ -12,4 +10,3 @@ langchain-cohere
 pinecone-client
 cohere
 python-dotenv
-```
