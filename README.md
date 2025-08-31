@@ -120,7 +120,7 @@ Then open the link (usually `http://localhost:8501/`) in your browser.
                     │   Streamlit Frontend     │
                     │   (User-facing answers)  │
                     └─────────────────────────┘
-'''text
+```
 
 ## Notes
 
