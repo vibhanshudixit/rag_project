@@ -1,9 +1,4 @@
-
----
-
 ### README.md
-
-````markdown
 # Hybrid RAG App (Streamlit + Pinecone + Cohere ReRank)
 
 This project is a **Retrieval-Augmented Generation (RAG)** app built with **Streamlit**.  
