@@ -21,10 +21,10 @@ from langchain.retrievers import EnsembleRetriever, BM25Retriever
 from langchain_pinecone import PineconeVectorStore
 from langchain_cohere import CohereRerank
 from langchain.retrievers.contextual_compression import ContextualCompressionRetriever
-from dotenv import load_dotenv
 
-load_dotenv('.env')
-os.environ['PINECONE_API_KEY'] = os.getenv('PINECONE_API_KEY') #type: ignore
+os.environ['PINECONE_API_KEY'] = st.secrets["PINECONE_API_KEY"]
+os.environ['COHERE_API_KEY'] = st.secrets["COHERE_API_KEY"]
+os.environ['GROQ_API_KEY'] = st.secrets["GROQ_API_KEY"]
 
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
