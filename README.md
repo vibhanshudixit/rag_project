@@ -4,6 +4,10 @@
 This project is a **Retrieval-Augmented Generation (RAG)** app built with **Streamlit**.  
 It lets you upload PDF or text documents, indexes them into Pinecone, and provides a chatbot-style interface that answers your questions using a **hybrid retriever** (dense + sparse) with **Cohere Reranking** and **Groq LLMs**.
 
+
+To access the frontend on StreamLit Cloud: https://ragproject-vibhanshu.streamlit.app/
+To access the pinecone vector DB: 
+
 ---
 
 ## Features
@@ -105,4 +109,33 @@ Then open the link (usually `http://localhost:8501/`) in your browser.
 * [HuggingFace Transformers](https://huggingface.co/) – Embeddings
 
 ---
+
+
+Got it 👍 — here’s a **more concise, human-friendly** version (2–3 points each):
+
+---
+
+###  Remarks
+
+* **Limits**:
+
+  - Since we rely on Pinecone, there are API limits, costs, and occasional latency issues.
+  - Chunking large documents sometimes loses important context.
+  - Retrieval quality is only as good as the embeddings + reranker we use.
+
+* **Trade-offs**:
+
+  - Pinecone gives us scalability and persistence, but it’s more expensive than local options like FAISS.
+  - Hybrid retrieval (Pinecone + BM25 + Cohere ReRank) improves accuracy, but adds extra complexity and latency.
+  - Modular design makes it flexible to extend, but production setups would need tighter control and monitoring.
+
+* **Next Steps**:
+
+  - Tune Pinecone for a better balance of cost, speed, and accuracy.
+  - Add caching so repeated queries don’t keep hitting Pinecone.
+  - Explore smarter pipelines (like document-type awareness or GraphRAG) to make retrieval more context-aware.
+
+---
+
+
 
