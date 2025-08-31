@@ -81,6 +81,46 @@ Then open the link (usually `http://localhost:8501/`) in your browser.
 ```
 
 ---
+## Project Architecture
+
+```text
+                    ┌─────────────────────────┐
+                    │      User Uploads       │
+                    │   (PDFs, Docs, etc.)    │
+                    └─────────────┬───────────┘
+                                  │
+                                  ▼
+                    ┌─────────────────────────┐
+                    │  Document Processing     │
+                    │  (Chunking & Embedding)  │
+                    └─────────────┬───────────┘
+                                  │
+                                  ▼
+                    ┌─────────────────────────┐
+                    │     Pinecone VectorDB    │
+                    │  (Stores embeddings for  │
+                    │   semantic retrieval)    │
+                    └─────────────┬───────────┘
+                                  │
+                                  ▼
+                    ┌─────────────────────────┐
+                    │    Query Processing      │
+                    │  (Retrieval + Re-ranking │
+                    │   + Context Formatting)  │
+                    └─────────────┬───────────┘
+                                  │
+                                  ▼
+                    ┌─────────────────────────┐
+                    │    LLM (Groq / OpenAI)   │
+                    │ Generates final response │
+                    └─────────────┬───────────┘
+                                  │
+                                  ▼
+                    ┌─────────────────────────┐
+                    │   Streamlit Frontend     │
+                    │   (User-facing answers)  │
+                    └─────────────────────────┘
+'''text
 
 ## Notes
 
